@@ -24,6 +24,9 @@ public class Server implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		List<Article> articles = repository.findAll();
+		for (Article article : articles) {
+			System.out.println(article.id);
+		}
 	}
 
 }
